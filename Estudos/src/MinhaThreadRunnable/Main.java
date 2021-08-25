@@ -9,8 +9,14 @@ public class Main implements Runnable{
     public Main(String nome, int tempo){
         this.nome = nome;
         this.tempo = tempo;
-        Thread chamando = new Thread(this); //Forma 2
-        chamando.start();                         //Forma 2
+        Thread t = new Thread(this); //Forma 2.
+        t.start();                         //Forma 2.
+
+        /*
+        Forma 2: nesse caso está instanciando da própria classe Thread
+        'Thread nome_da_instância = new Thread(alvo)' e dentro do parameter
+        está sendo passado essa Classe Main inteira '(this)' como alvo.
+        */
     }
 
     @Override
